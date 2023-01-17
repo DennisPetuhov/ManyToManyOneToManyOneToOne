@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.RestController
 @RequestMapping("/api")
 class OneToOneController(val postRepo: PostRepo,val commentRepo: CommentRepo) {
 
-    @PostMapping("/comments")
+    @PostMapping("/onetoontcoments")
     fun makeComment(@RequestBody comment: Comment):Comment{
       return  commentRepo.save(comment)
     }
-    @PostMapping("/posts")
+    @PostMapping("/onetooneposts")
     fun makePost(post: Post):Post{
         return postRepo.save(post)
     }
